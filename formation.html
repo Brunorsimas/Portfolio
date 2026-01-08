@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Formação acadêmica e certificações de Bruno Rafael - Análise de Sistemas, TI, Cisco, Microsoft e outras qualificações." />
+  <meta name="keywords" content="Formação TI, Análise de Sistemas, SENAC, Cisco, Microsoft, Certificações, Graduação" />
+  <meta name="author" content="Bruno Rafael" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Bruno Rafael | Formação Acadêmica & Certificações</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --primary: #38bdf8;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, rgba(2, 6, 23, 0.9), rgba(15, 23, 42, 0.9)), url('fundo.gif');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    header {
+      padding: 80px 10%;
+      display: grid;
+      gap: 30px;
+    }
+    .header-content {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 40px;
+    }
+    .header-text {
+      max-width: 600px;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    header span {
+      color: var(--primary);
+    }
+    header p {
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 8px;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .nav-link:hover {
+      background: rgba(56, 189, 248, 0.2);
+      transform: translateY(-2px);
+    }
+    section {
+      padding: 80px 10%;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: linear-gradient(180deg, #020617, #020617) padding-box,
+                  linear-gradient(120deg, transparent, var(--primary), transparent) border-box;
+      border: 1px solid transparent;
+      border-radius: 16px;
+      padding: 24px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(56,189,248,0.15);
+    }
+    .card h3 {
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    .tech {
+      margin-top: 15px;
+      font-size: 0.85rem;
+      color: var(--primary);
+    }
+    @media (max-width: 768px) {
+      header { padding: 60px 5%; }
+      header h1 { font-size: 2rem; }
+      section { padding: 60px 5%; }
+      h2 { font-size: 1.5rem; }
+      .projects { grid-template-columns: 1fr; }
+      .header-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .nav-links { 
+        flex-direction: row; 
+        gap: 10px; 
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <div class="header-content">
+      <div class="header-text">
+        <h1>Bruno <span>— Formação Acadêmica</span></h1>
+        <p>
+          Formação contínua em Tecnologia da Informação com graduação em Análise de Sistemas,
+          técnico em TI e múltiplas certificações em áreas estratégicas para o desenvolvimento profissional.
+        </p>
+      </div>
+      <div class="nav-links">
+        <a href="portfolio bruno.html" class="nav-link">
+          <i class="fas fa-project-diagram"></i>
+          <span>Projetos e Soluções</span>
+        </a>
+        <a href="skills.html" class="nav-link">
+          <i class="fas fa-cogs"></i>
+          <span>Habilidades Técnicas</span>
+        </a>
+        <a href="experience.html" class="nav-link">
+          <i class="fas fa-briefcase"></i>
+          <span>Experiência Profissional</span>
+        </a>
+        <a href="contact.html" class="nav-link">
+          <i class="fas fa-envelope"></i>
+          <span>Contato</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section role="region">
+    <h2>Formação Acadêmica & Certificações</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Graduação em Análise e Desenvolvimento de Sistemas</h3>
+        <p>SENAC EAD — Formação superior com foco em desenvolvimento de sistemas, lógica de programação, banco de dados e engenharia de software.</p>
+      </div>
+      <div class="card">
+        <h3>Técnico em Tecnologia da Informação</h3>
+        <p>Escola Técnica SENAC — Formação técnica voltada a suporte, infraestrutura, redes, hardware e sistemas operacionais.</p>
+      </div>
+      <div class="card">
+        <h3>Certificações e Cursos Complementares</h3>
+        <p>
+          • Programação Web — Instituto Federal do Rio Grande do Sul<br />
+          • Introdução à Cibersegurança — Cisco<br />
+          • Defesa de Redes — Cisco<br />
+          • Introdução à Ciência de Dados — Cisco<br />
+          • Análise de Dados e Inteligência de Negócios — Gran Faculdade<br />
+          • Manutenção e Software de Celulares — Udemy<br />
+          • Inglês — Instituto Federal do Rio Grande do Sul<br />
+          • Design Gráfico (Corel Draw X5, Photoshop CS4, Flash CS5) — MicroLins<br />
+          • Montagem e Manutenção de Computadores — MicroLins<br />
+          • Formação de Operadores, Atendimento ao Cliente, Qualidade no Atendimento e Técnicas de Vendas — Unitec
+        </p>
+        <div class="tech">Tecnologia • Redes • Dados • Segurança • Atendimento</div>
+      </div>
+    </div>
+  </section>
+
+  <footer role="contentinfo">
+    <div>
+      <strong>Contato</strong><br />
+      <a href="mailto:brafael174@gmail.com">brafael174@gmail.com</a><br />
+      <span>Paulista - PE</span>
+    </div>
+    <div>
+      <a href="https://github.com/Brunorsimas"><i class="fab fa-github"></i> GitHub</a><br />
+      <a href="https://www.linkedin.com/in/bruno-rafael-95b781186/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+    <div>
+      <strong>Sobre</strong><br />
+      <span>Desenvolvido com ❤️ por Bruno Rafael</span><br />
+      <span>© 2024 Todos os direitos reservados</span>
+    </div>
+  </footer>
+
+  <script>
+    // Animação de cards ao scroll
+    document.addEventListener('DOMContentLoaded', function() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '0';
+            entry.target.style.transform = 'translateY(30px)';
+            
+            setTimeout(() => {
+              entry.target.style.transition = 'all 0.6s ease-out';
+              entry.target.style.opacity = '1';
+              entry.target.style.transform = 'translateY(0)';
+            }, 100);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.card').forEach((card, index) => {
+        observer.observe(card);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Habilidades técnicas de Bruno Rafael - Analista de TI com experiência em cloud, desenvolvimento, automação e infraestrutura." />
+  <meta name="keywords" content="Habilidades TI, Cloud Computing, AWS, Azure, Python, JavaScript, C#, Banco de Dados, Suporte Técnico" />
+  <meta name="author" content="Bruno Rafael" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Bruno Rafael | Habilidades Técnicas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="skills.css">
+  
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --primary: #38bdf8;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, rgba(2, 6, 23, 0.9), rgba(15, 23, 42, 0.9)), url('fundo.gif');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    header {
+      padding: 80px 10%;
+      display: grid;
+      gap: 30px;
+    }
+    .header-content {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 40px;
+    }
+    .header-text {
+      max-width: 600px;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    header span {
+      color: var(--primary);
+    }
+    header p {
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+    .nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      border-radius: 8px;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .nav-link:hover {
+      background: rgba(56, 189, 248, 0.2);
+      transform: translateY(-2px);
+    }
+    section {
+      padding: 80px 10%;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 768px) {
+      header { padding: 60px 5%; }
+      header h1 { font-size: 2rem; }
+      section { padding: 60px 5%; }
+      h2 { font-size: 1.5rem; }
+      .header-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .nav-links { 
+        flex-direction: row; 
+        gap: 10px; 
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <div class="header-content">
+      <div class="header-text">
+        <h1>Bruno <span>— Habilidades Técnicas</span></h1>
+        <p>
+          Conjunto de competências técnicas desenvolvidas ao longo da carreira profissional,
+          com foco em soluções corporativas, automação e infraestrutura de TI.
+        </p>
+      </div>
+      <div class="nav-links">
+        <a href="portfolio bruno.html" class="nav-link">
+          <i class="fas fa-project-diagram"></i>
+          <span>Projetos e Soluções</span>
+        </a>
+        <a href="experience.html" class="nav-link">
+          <i class="fas fa-briefcase"></i>
+          <span>Experiência Profissional</span>
+        </a>
+        <a href="formation.html" class="nav-link">
+          <i class="fas fa-graduation-cap"></i>
+          <span>Formação Acadêmica</span>
+        </a>
+        <a href="contact.html" class="nav-link">
+          <i class="fas fa-envelope"></i>
+          <span>Contato</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section role="region">
+    <h2>Habilidades Técnicas</h2>
+    <div class="skills-section">
+      <div class="skills-categories">
+        <div class="skill-category">
+          <h3><i class="fas fa-cloud"></i> Cloud Computing</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fab fa-aws"></i></div>
+              <div class="skill-info">
+                <div class="skill-name">AWS</div>
+                <div class="skill-level">
+                  <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                  <span class="skill-percentage">70%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fab fa-microsoft"></i></div>
+              <div class="skill-info">
+                <div class="skill-name">Azure</div>
+                <div class="skill-level">
+                  <div class="skill-bar"><div class="skill-progress" style="width: 60%"></div></div>
+                  <span class="skill-percentage">60%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fas fa-server"></i></div>
+              <div class="skill-info">
+                <div class="skill-name">Cloud Service</div>
+                <div class="skill-level">
+                  <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                  <span class="skill-percentage">70%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3><i class="fas fa-code"></i> Desenvolvimento</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fab fa-python"></i></div>
+              <div class="skill-info">
+                <div class="skill-name">Python</div>
+                <div class="skill-level">
+                  <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
+                  <span class="skill-percentage">75%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fab fa-html5"></i></div>
+              <div class="skill-info">
+                <div class="skill-name">HTML/CSS</div>
+                <div class="skill-level">
+                  <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                  <span class="skill-percentage">80%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fab fa-js"></i></div>
+              <div class="skill-info">
+                <div class="skill-name">JavaScript</div>
+                <div class="skill-level">
+                  <div class="skill-bar"><div class="skill-progress" style="width: 55%"></div></div>
+                  <span class="skill-percentage">55%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fas fa-code"></i></div>
+              <div class="skill-info">
+                <div class="skill-name">C#</div>
+                <div class="skill-level">
+                  <div class="skill-bar"><div class="skill-progress" style="width: 60%"></div></div>
+                  <span class="skill-percentage">60%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3><i class="fas fa-database"></i> Banco de Dados</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fas fa-database"></i></div>
+              <div class="skill-info">
+                <div class="skill-name">SQL</div>
+                <div class="skill-level">
+                  <div class="skill-bar"><div class="skill-progress" style="width: 65%"></div></div>
+                  <span class="skill-percentage">65%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fas fa-database"></i></div>
+              <div class="skill-info">
+                <div class="skill-name">Oracle</div>
+                <div class="skill-level">
+                  <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                  <span class="skill-percentage">70%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fas fa-database"></i></div>
+              <div class="skill-info">
+                <div class="skill-name">Azure SQL</div>
+                <div class="skill-level">
+                  <div class="skill-bar"><div class="skill-progress" style="width: 65%"></div></div>
+                  <span class="skill-percentage">65%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3><i class="fas fa-tools"></i> Suporte & Infra</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+              <div class="skill-info">
+                <div class="skill-name">Redes</div>
+                <div class="skill-level">
+                  <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                  <span class="skill-percentage">70%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fas fa-server"></i></div>
+              <div class="skill-info">
+                <div class="skill-name">Servidores</div>
+                <div class="skill-level">
+                  <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
+                  <span class="skill-percentage">70%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fas fa-headset"></i></div>
+              <div class="skill-info">
+                <div class="skill-name">GLPI</div>
+                <div class="skill-level">
+                  <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
+                  <span class="skill-percentage">80%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3><i class="fas fa-cogs"></i> Sistemas Corporativos</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fas fa-cogs"></i></div>
+              <div class="skill-info">
+                <div class="skill-name">ERP Protheus</div>
+                <div class="skill-level">
+                  <div class="skill-bar"><div class="skill-progress" style="width: 65%"></div></div>
+                  <span class="skill-percentage">65%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fas fa-cogs"></i></div>
+              <div class="skill-info">
+                <div class="skill-name">ERP Pirâmide</div>
+                <div class="skill-level">
+                  <div class="skill-bar"><div class="skill-progress" style="width: 60%"></div></div>
+                  <span class="skill-percentage">60%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fas fa-cogs"></i></div>
+              <div class="skill-info">
+                <div class="skill-name">Sankhya ERP</div>
+                <div class="skill-level">
+                  <div class="skill-bar"><div class="skill-progress" style="width: 55%"></div></div>
+                  <span class="skill-percentage">55%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-icon"><i class="fas fa-cogs"></i></div>
+              <div class="skill-info">
+                <div class="skill-name">Power Apps</div>
+                <div class="skill-level">
+                  <div class="skill-bar"><div class="skill-progress" style="width: 55%"></div></div>
+                  <span class="skill-percentage">55%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer role="contentinfo">
+    <div>
+      <strong>Contato</strong><br />
+      <a href="mailto:brafael174@gmail.com">brafael174@gmail.com</a><br />
+      <span>Paulista - PE</span>
+    </div>
+    <div>
+      <a href="https://github.com/Brunorsimas"><i class="fab fa-github"></i> GitHub</a><br />
+      <a href="https://www.linkedin.com/in/bruno-rafael-95b781186/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+    <div>
+      <strong>Sobre</strong><br />
+      <span>Desenvolvido com ❤️ por Bruno Rafael</span><br />
+      <span>© 2024 Todos os direitos reservados</span>
+    </div>
+  </footer>
+
+  <script>
+    // Animação das barras de habilidades
+    document.addEventListener('DOMContentLoaded', function() {
+      const skillBars = document.querySelectorAll('.skill-progress');
+      
+      skillBars.forEach((bar, index) => {
+        const width = bar.style.width;
+        bar.style.width = '0%';
+        
+        setTimeout(() => {
+          bar.style.width = width;
+        }, 100 + (index * 50));
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+/* Projects Section */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: linear-gradient(180deg, #020617, #020617) padding-box,
+              linear-gradient(120deg, transparent, var(--primary), transparent) border-box;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  padding: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(56,189,248,0.15);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.tech {
+  margin-top: 15px;
+  font-size: 0.85rem;
+  color: var(--primary);
+}
+
+.project-link {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  color: #0ea5e9;
+  transform: translateX(3px);
+}
+
+.project-link i {
+  font-size: 0.9rem;
+}
+
+/* Filtros de Projetos */
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 25px;
+  color: var(--primary);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.filter-btn:hover {
+  background: rgba(56, 189, 248, 0.2);
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: var(--primary);
+  color: var(--bg);
+  border-color: var(--primary);
+}
+
+/* Animação de fade para filtros */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  position: relative;
+  justify-items: center;
+}
+
+.card {
+  transition: all 0.3s ease;
+}
+
+.card.hidden {
+  opacity: 0;
+  transform: scale(0.8);
+  visibility: hidden;
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Garante que o grid mantenha proporção */
+.projects .card:not(.hidden) {
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+  position: relative;
+  pointer-events: auto;
+  z-index: 1;
+  width: 100%;
+}
+
+/* Ajuste para cards filtrados */
+.projects .card.hidden {
+  opacity: 0;
+  transform: scale(0.8);
+  visibility: hidden;
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  width: 0;
+}
+
+/* Limitar largura para poucos projetos */
+.projects.filtered-small .card:not(.hidden) {
+  max-width: 768px;
+}
+
+.projects.filtered-single .card:not(.hidden) {
+  max-width: 600px;
+}
+
+/* Responsividade para projetos */
+@media (max-width: 768px) {
+  .filter-buttons {
+    gap: 10px;
+  }
+  
+  .filter-btn {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+}
