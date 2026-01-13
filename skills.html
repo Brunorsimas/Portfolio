@@ -6,133 +6,65 @@
   <meta name="keywords" content="Habilidades TI, Cloud Computing, AWS, Azure, Python, JavaScript, C#, Banco de Dados, Suporte Técnico" />
   <meta name="author" content="Bruno Rafael" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Bruno Rafael | Habilidades Técnicas" />
+  <meta property="og:description" content="Conjunto de competências técnicas em cloud computing, desenvolvimento, infraestrutura e sistemas corporativos." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://brunorsimas.github.io/skills.html" />
+  <meta property="og:image" content="https://brunorsimas.github.io/favicon.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bruno Rafael | Habilidades Técnicas" />
+  <meta name="twitter:description" content="Competências em AWS, Azure, Python, C#, SQL, Redes, Servidores e muito mais." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   
   <title>Bruno Rafael | Habilidades Técnicas</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="skills.css">
   
   <style>
-    :root {
-      --bg: #0f172a;
-      --card: #111827;
-      --primary: #38bdf8;
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(180deg, rgba(2, 6, 23, 0.9), rgba(15, 23, 42, 0.9)), url('fundo.gif');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      color: var(--text);
-      line-height: 1.6;
-      min-height: 100vh;
-    }
-    header {
-      padding: 80px 10%;
-      display: grid;
-      gap: 30px;
-    }
-    .header-content {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      gap: 40px;
-    }
-    .header-text {
-      max-width: 600px;
-    }
-    header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-    }
-    header span {
-      color: var(--primary);
-    }
-    header p {
-      color: var(--muted);
-      font-size: 1.1rem;
-    }
-    .nav-links {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    .nav-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 20px;
-      background: rgba(56, 189, 248, 0.1);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      border-radius: 8px;
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-    .nav-link:hover {
-      background: rgba(56, 189, 248, 0.2);
-      transform: translateY(-2px);
-    }
-    section {
-      padding: 80px 10%;
-    }
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 40px;
-    }
-    @media (max-width: 768px) {
-      header { padding: 60px 5%; }
-      header h1 { font-size: 2rem; }
-      section { padding: 60px 5%; }
-      h2 { font-size: 1.5rem; }
-      .header-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-      .nav-links { 
-        flex-direction: row; 
-        gap: 10px; 
-        flex-wrap: wrap;
-      }
-    }
+    .typing { --typing-steps: 20; }
   </style>
+  
+  <!-- Custom SVG Icons -->
+  <link rel="stylesheet" href="icons.svg">
 </head>
 <body>
+  <!-- Orbes de Luz Flutuantes -->
+  <div class="floating-orb orb-1"></div>
+  <div class="floating-orb orb-2"></div>
+  <div class="floating-orb orb-3"></div>
+
+  <!-- Partículas Animadas -->
+  <div class="particles-container" id="particles"></div>
+  
+  <!-- Sticky Navbar -->
+  <nav class="sticky-navbar" id="stickyNavbar">
+    <a href="index.html" class="sticky-navbar-logo">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <use href="#icon-code"></use>
+      </svg>
+      Bruno Rafael De Mendonça Simas
+    </a>
+    <div class="sticky-nav-links">
+      <a href="index.html" class="sticky-nav-link" data-page="projetos">Projetos</a>
+      <a href="skills.html" class="sticky-nav-link" data-page="habilidades">Habilidades</a>
+      <a href="experience.html" class="sticky-nav-link" data-page="experiencia">Experiência</a>
+      <a href="formation.html" class="sticky-nav-link" data-page="formacao">Formação</a>
+      <a href="contact.html" class="sticky-nav-link" data-page="contato">Contato</a>
+    </div>
+  </nav>
+
   <header role="banner">
     <div class="header-content">
       <div class="header-text">
-        <h1>Bruno <span>— Habilidades Técnicas</span></h1>
+        <h1><span class="typing">Habilidades Técnicas</span></h1>
         <p>
           Conjunto de competências técnicas desenvolvidas ao longo da carreira profissional,
           com foco em soluções corporativas, automação e infraestrutura de TI.
         </p>
-      </div>
-      <div class="nav-links">
-        <a href="portfolio bruno.html" class="nav-link">
-          <i class="fas fa-project-diagram"></i>
-          <span>Projetos e Soluções</span>
-        </a>
-        <a href="experience.html" class="nav-link">
-          <i class="fas fa-briefcase"></i>
-          <span>Experiência Profissional</span>
-        </a>
-        <a href="formation.html" class="nav-link">
-          <i class="fas fa-graduation-cap"></i>
-          <span>Formação Acadêmica</span>
-        </a>
-        <a href="contact.html" class="nav-link">
-          <i class="fas fa-envelope"></i>
-          <span>Contato</span>
-        </a>
       </div>
     </div>
   </header>
@@ -150,7 +82,7 @@
                 <div class="skill-name">AWS</div>
                 <div class="skill-level">
                   <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
-                  <span class="skill-percentage">70%</span>
+                  <span class="skill-percentage">55%</span>
                 </div>
               </div>
             </div>
@@ -160,7 +92,7 @@
                 <div class="skill-name">Azure</div>
                 <div class="skill-level">
                   <div class="skill-bar"><div class="skill-progress" style="width: 60%"></div></div>
-                  <span class="skill-percentage">60%</span>
+                  <span class="skill-percentage">55%</span>
                 </div>
               </div>
             </div>
@@ -170,7 +102,7 @@
                 <div class="skill-name">Cloud Service</div>
                 <div class="skill-level">
                   <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
-                  <span class="skill-percentage">70%</span>
+                  <span class="skill-percentage">60%</span>
                 </div>
               </div>
             </div>
@@ -186,7 +118,7 @@
                 <div class="skill-name">Python</div>
                 <div class="skill-level">
                   <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
-                  <span class="skill-percentage">75%</span>
+                  <span class="skill-percentage">70%</span>
                 </div>
               </div>
             </div>
@@ -206,7 +138,7 @@
                 <div class="skill-name">JavaScript</div>
                 <div class="skill-level">
                   <div class="skill-bar"><div class="skill-progress" style="width: 55%"></div></div>
-                  <span class="skill-percentage">55%</span>
+                  <span class="skill-percentage">60%</span>
                 </div>
               </div>
             </div>
@@ -232,7 +164,7 @@
                 <div class="skill-name">SQL</div>
                 <div class="skill-level">
                   <div class="skill-bar"><div class="skill-progress" style="width: 65%"></div></div>
-                  <span class="skill-percentage">65%</span>
+                  <span class="skill-percentage">60%</span>
                 </div>
               </div>
             </div>
@@ -242,7 +174,7 @@
                 <div class="skill-name">Oracle</div>
                 <div class="skill-level">
                   <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
-                  <span class="skill-percentage">70%</span>
+                  <span class="skill-percentage">60%</span>
                 </div>
               </div>
             </div>
@@ -252,7 +184,7 @@
                 <div class="skill-name">Azure SQL</div>
                 <div class="skill-level">
                   <div class="skill-bar"><div class="skill-progress" style="width: 65%"></div></div>
-                  <span class="skill-percentage">65%</span>
+                  <span class="skill-percentage">60%</span>
                 </div>
               </div>
             </div>
@@ -285,7 +217,7 @@
             <div class="skill-item">
               <div class="skill-icon"><i class="fas fa-headset"></i></div>
               <div class="skill-info">
-                <div class="skill-name">GLPI</div>
+                <div class="skill-name">Atendimento ao Cliente</div>
                 <div class="skill-level">
                   <div class="skill-bar"><div class="skill-progress" style="width: 80%"></div></div>
                   <span class="skill-percentage">80%</span>
@@ -304,7 +236,7 @@
                 <div class="skill-name">ERP Protheus</div>
                 <div class="skill-level">
                   <div class="skill-bar"><div class="skill-progress" style="width: 65%"></div></div>
-                  <span class="skill-percentage">65%</span>
+                  <span class="skill-percentage">60%</span>
                 </div>
               </div>
             </div>
@@ -314,7 +246,7 @@
                 <div class="skill-name">ERP Pirâmide</div>
                 <div class="skill-level">
                   <div class="skill-bar"><div class="skill-progress" style="width: 60%"></div></div>
-                  <span class="skill-percentage">60%</span>
+                  <span class="skill-percentage">55%</span>
                 </div>
               </div>
             </div>
@@ -324,7 +256,7 @@
                 <div class="skill-name">Sankhya ERP</div>
                 <div class="skill-level">
                   <div class="skill-bar"><div class="skill-progress" style="width: 55%"></div></div>
-                  <span class="skill-percentage">55%</span>
+                  <span class="skill-percentage">60%</span>
                 </div>
               </div>
             </div>
@@ -357,24 +289,46 @@
     <div>
       <strong>Sobre</strong><br />
       <span>Desenvolvido com ❤️ por Bruno Rafael</span><br />
-      <span>© 2024 Todos os direitos reservados</span>
+      <span>© 2025 Todos os direitos reservados</span>
     </div>
   </footer>
 
+  <script src="site.js"></script>
+
   <script>
-    // Animação das barras de habilidades
+    // Animação das barras de habilidades otimizada
     document.addEventListener('DOMContentLoaded', function() {
+      initSkillBars();
+    });
+
+    function initSkillBars() {
       const skillBars = document.querySelectorAll('.skill-progress');
       
+      // Usar Intersection Observer para performance
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const bar = entry.target;
+            const width = bar.style.width;
+            bar.style.width = '0%';
+            
+            // Animar apenas quando visível
+            requestAnimationFrame(() => {
+              setTimeout(() => {
+                bar.style.transition = 'width 0.8s ease-out';
+                bar.style.width = width;
+              }, 50);
+            });
+          }
+        });
+      }, { threshold: 0.1 });
+
       skillBars.forEach((bar, index) => {
-        const width = bar.style.width;
-        bar.style.width = '0%';
-        
-        setTimeout(() => {
-          bar.style.width = width;
-        }, 100 + (index * 50));
+        observer.observe(bar);
       });
-    });
+    }
+
+    
   </script>
 </body>
 </html>

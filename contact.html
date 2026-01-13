@@ -6,210 +6,65 @@
   <meta name="keywords" content="Contato TI, Email, GitHub, LinkedIn, Paulista PE, Bruno Rafael" />
   <meta name="author" content="Bruno Rafael" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Bruno Rafael | Contato" />
+  <meta property="og:description" content="Entre em contato comigo para discutir oportunidades profissionais e projetos colaborativos." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://brunorsimas.github.io/contact.html" />
+  <meta property="og:image" content="https://brunorsimas.github.io/favicon.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bruno Rafael | Contato" />
+  <meta name="twitter:description" content="Entre em contato comigo via email, GitHub ou LinkedIn." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   
   <title>Bruno Rafael | Contato</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="contact.css">
   
   <style>
-    :root {
-      --bg: #0f172a;
-      --card: #111827;
-      --primary: #38bdf8;
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(180deg, rgba(2, 6, 23, 0.9), rgba(15, 23, 42, 0.9)), url('fundo.gif');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      color: var(--text);
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    header {
-      padding: 80px 10%;
-      display: grid;
-      gap: 30px;
-    }
-    .header-content {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      gap: 40px;
-    }
-    .header-text {
-      max-width: 600px;
-    }
-    header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-    }
-    header span {
-      color: var(--primary);
-    }
-    header p {
-      color: var(--muted);
-      font-size: 1.1rem;
-    }
-    .nav-links {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    .nav-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 20px;
-      background: rgba(56, 189, 248, 0.1);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      border-radius: 8px;
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-    .nav-link:hover {
-      background: rgba(56, 189, 248, 0.2);
-      transform: translateY(-2px);
-    }
-    main {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 10%;
-    }
-    .contact-container {
-      background: linear-gradient(180deg, #020617, #020617) padding-box,
-                  linear-gradient(120deg, transparent, var(--primary), transparent) border-box;
-      border: 1px solid transparent;
-      border-radius: 20px;
-      padding: 60px;
-      max-width: 600px;
-      width: 100%;
-      text-align: center;
-      backdrop-filter: blur(10px);
-    }
-    .contact-title {
-      font-size: 2rem;
-      margin-bottom: 30px;
-      color: var(--primary);
-    }
-    .contact-info {
-      display: grid;
-      gap: 30px;
-    }
-    .contact-item {
-      padding: 20px;
-      border-radius: 12px;
-      background: rgba(15, 23, 42, 0.8);
-      border: 1px solid rgba(56, 189, 248, 0.1);
-      transition: all 0.3s ease;
-    }
-    .contact-item:hover {
-      background: rgba(56, 189, 248, 0.1);
-      transform: translateY(-3px);
-      border-color: rgba(56, 189, 248, 0.3);
-    }
-    .contact-item i {
-      font-size: 2rem;
-      color: var(--primary);
-      margin-bottom: 15px;
-    }
-    .contact-item h3 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      color: var(--text);
-    }
-    .contact-item p, .contact-item a {
-      color: var(--muted);
-      font-size: 1rem;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    .contact-item a:hover {
-      color: var(--primary);
-    }
-    .social-links {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 20px;
-    }
-    .social-links a {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 20px;
-      background: rgba(56, 189, 248, 0.1);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      border-radius: 8px;
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-    .social-links a:hover {
-      background: rgba(56, 189, 248, 0.2);
-      transform: translateY(-2px);
-    }
-    @media (max-width: 768px) {
-      header { padding: 60px 5%; }
-      header h1 { font-size: 2rem; }
-      main { padding: 20px 5%; }
-      .contact-container { padding: 40px 20px; }
-      .contact-title { font-size: 1.5rem; }
-      .social-links { flex-direction: column; }
-      .header-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-      .nav-links { 
-        flex-direction: row; 
-        gap: 10px; 
-        flex-wrap: wrap;
-      }
-    }
+    .typing { --typing-steps: 7; }
   </style>
+  
+  <!-- Custom SVG Icons -->
+  <link rel="stylesheet" href="icons.svg">
 </head>
 <body>
+  <!-- Orbes de Luz Flutuantes -->
+  <div class="floating-orb orb-1"></div>
+  <div class="floating-orb orb-2"></div>
+  <div class="floating-orb orb-3"></div>
+
+  <!-- Partículas Animadas -->
+  <div class="particles-container" id="particles"></div>
+  
+  <!-- Sticky Navbar -->
+  <nav class="sticky-navbar" id="stickyNavbar">
+    <a href="index.html" class="sticky-navbar-logo">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <use href="#icon-code"></use>
+      </svg>
+      Bruno Rafael De Mendonça Simas
+    </a>
+    <div class="sticky-nav-links">
+      <a href="index.html" class="sticky-nav-link" data-page="projetos">Projetos</a>
+      <a href="skills.html" class="sticky-nav-link" data-page="habilidades">Habilidades</a>
+      <a href="experience.html" class="sticky-nav-link" data-page="experiencia">Experiência</a>
+      <a href="formation.html" class="sticky-nav-link" data-page="formacao">Formação</a>
+      <a href="contact.html" class="sticky-nav-link" data-page="contato">Contato</a>
+    </div>
+  </nav>
+
   <header role="banner">
     <div class="header-content">
       <div class="header-text">
-        <h1>Bruno <span>— Contato</span></h1>
+        <h1><span class="typing">Contato</span></h1>
         <p>
           Conecte-se comigo para discutir oportunidades profissionais,
           projetos colaborativos ou simplesmente trocar experiências sobre tecnologia e inovação.
         </p>
-      </div>
-      <div class="nav-links">
-        <a href="portfolio bruno.html" class="nav-link">
-          <i class="fas fa-project-diagram"></i>
-          <span>Projetos e Soluções</span>
-        </a>
-        <a href="skills.html" class="nav-link">
-          <i class="fas fa-cogs"></i>
-          <span>Habilidades Técnicas</span>
-        </a>
-        <a href="experience.html" class="nav-link">
-          <i class="fas fa-briefcase"></i>
-          <span>Experiência Profissional</span>
-        </a>
-        <a href="formation.html" class="nav-link">
-          <i class="fas fa-graduation-cap"></i>
-          <span>Formação Acadêmica</span>
-        </a>
       </div>
     </div>
   </header>
@@ -217,36 +72,20 @@
   <main>
     <div class="contact-container">
       <h2 class="contact-title">Vamos Conversar?</h2>
-      
-      <div class="contact-info">
-        <div class="contact-item">
+
+      <div class="contact-actions">
+        <a class="contact-action contact-action--github" href="https://github.com/Brunorsimas" target="_blank" rel="noopener" title="Visite meu GitHub">
+          <i class="fab fa-github"></i>
+          GitHub
+        </a>
+        <a class="contact-action contact-action--linkedin" href="https://www.linkedin.com/in/bruno-rafael-95b781186/" target="_blank" rel="noopener" title="Visite meu LinkedIn">
+          <i class="fab fa-linkedin"></i>
+          LinkedIn
+        </a>
+        <a class="contact-action contact-action--email" href="mailto:brafael174@gmail.com" title="Enviar email">
           <i class="fas fa-envelope"></i>
-          <h3>Email</h3>
-          <p>
-            <a href="mailto:brafael174@gmail.com">brafael174@gmail.com</a>
-          </p>
-        </div>
-        
-        <div class="contact-item">
-          <i class="fas fa-map-marker-alt"></i>
-          <h3>Localização</h3>
-          <p>Paulista - PE, Brasil</p>
-        </div>
-        
-        <div class="contact-item">
-          <i class="fas fa-share-alt"></i>
-          <h3>Redes Sociais</h3>
-          <div class="social-links">
-            <a href="https://github.com/Brunorsimas" target="_blank">
-              <i class="fab fa-github"></i>
-              GitHub
-            </a>
-            <a href="https://www.linkedin.com/in/bruno-rafael-95b781186/" target="_blank">
-              <i class="fab fa-linkedin"></i>
-              LinkedIn
-            </a>
-          </div>
-        </div>
+          Email
+        </a>
       </div>
     </div>
   </main>
@@ -258,31 +97,36 @@
       <span>Paulista - PE</span>
     </div>
     <div>
-      <a href="https://github.com/Brunorsimas"><i class="fab fa-github"></i> GitHub</a><br />
-      <a href="https://www.linkedin.com/in/bruno-rafael-95b781186/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://github.com/Brunorsimas"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><use href="#icon-code"></use></svg> GitHub</a><br />
+      <a href="https://www.linkedin.com/in/bruno-rafael-95b781186/"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><use href="#icon-code"></use></svg> LinkedIn</a>
     </div>
     <div>
       <strong>Sobre</strong><br />
       <span>Desenvolvido com ❤️ por Bruno Rafael</span><br />
-      <span>© 2024 Todos os direitos reservados</span>
+      <span>© 2025 Todos os direitos reservados</span>
     </div>
   </footer>
+
+  <script src="site.js"></script>
 
   <script>
     // Animação de entrada
     document.addEventListener('DOMContentLoaded', function() {
-      const items = document.querySelectorAll('.contact-item');
-      items.forEach((item, index) => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateY(30px)';
-        
-        setTimeout(() => {
-          item.style.transition = 'all 0.6s ease-out';
-          item.style.opacity = '1';
-          item.style.transform = 'translateY(0)';
-        }, 100 + (index * 150));
+      Site.staggerReveal(document.querySelectorAll('.contact-action'), {
+        baseDelay: 100,
+        step: 150,
+        from: 'translateX(-22px)',
+        durationMs: 600
       });
     });
+
+    function initBackToTop() {
+      // Removido
+    }
+
+    function initDrawerMenu() {
+      // Removido
+    }
   </script>
 </body>
 </html>

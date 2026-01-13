@@ -16,7 +16,7 @@ Portfólio profissional desenvolvido para apresentar minhas habilidades técnica
 
 ```
 Site Portfolio/
-├── portfolio bruno.html      # Página principal com projetos
+├── index.html      # Página principal com projetos
 ├── skills.html              # Habilidades técnicas
 ├── experience.html          # Experiência profissional
 ├── formation.html           # Formação acadêmica
@@ -39,7 +39,7 @@ Site Portfolio/
 
 ### 📋 Páginas e Conteúdo
 
-#### Página Principal (`portfolio bruno.html`)
+#### Página Principal (`index.html`)
 - Apresentação profissional e resumo
 - **8 Projetos** organizados por categorias:
   - **Python/AWS**: AWSTEXTRACT, AWS Rekognition
@@ -106,7 +106,7 @@ Site Portfolio/
    ```
 
 2. **Abra o site**:
-   - Dê duplo clique em `portfolio bruno.html`
+   - Dê duplo clique em `index.html`
    - Ou use um servidor local:
      ```bash
      # Python 3

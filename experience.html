@@ -6,197 +6,149 @@
   <meta name="keywords" content="Experiência TI, Suporte Técnico, Infraestrutura, ERP, GLPI, Power Apps, Oracle" />
   <meta name="author" content="Bruno Rafael" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Bruno Rafael | Experiência Profissional" />
+  <meta property="og:description" content="Conheça minha experiência profissional em suporte corporativo, infraestrutura, ERP e sistemas." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://brunorsimas.github.io/experience.html" />
+  <meta property="og:image" content="https://brunorsimas.github.io/favicon.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bruno Rafael | Experiência Profissional" />
+  <meta name="twitter:description" content="Trajetória profissional em Tecnologia da Informação." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   
   <title>Bruno Rafael | Experiência Profissional</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="experience.css">
   
   <style>
-    :root {
-      --bg: #0f172a;
-      --card: #111827;
-      --primary: #38bdf8;
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(180deg, rgba(2, 6, 23, 0.9), rgba(15, 23, 42, 0.9)), url('fundo.gif');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      color: var(--text);
-      line-height: 1.6;
-      min-height: 100vh;
-    }
-    header {
-      padding: 80px 10%;
-      display: grid;
-      gap: 30px;
-    }
-    .header-content {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: center;
-      gap: 40px;
-    }
-    .header-text {
-      max-width: 600px;
-    }
-    header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-    }
-    header span {
-      color: var(--primary);
-    }
-    header p {
-      color: var(--muted);
-      font-size: 1.1rem;
-    }
-    .nav-links {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    .nav-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 20px;
-      background: rgba(56, 189, 248, 0.1);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      border-radius: 8px;
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-    .nav-link:hover {
-      background: rgba(56, 189, 248, 0.2);
-      transform: translateY(-2px);
-    }
-    section {
-      padding: 80px 10%;
-    }
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 40px;
-    }
-    @media (max-width: 768px) {
-      header { padding: 60px 5%; }
-      header h1 { font-size: 2rem; }
-      section { padding: 60px 5%; }
-      h2 { font-size: 1.5rem; }
-      .header-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-      .nav-links { 
-        flex-direction: row; 
-        gap: 10px; 
-        flex-wrap: wrap;
-      }
-    }
+    .typing { --typing-steps: 23; }
   </style>
+  
+  <!-- Custom SVG Icons -->
+  <link rel="stylesheet" href="icons.svg">
 </head>
 <body>
+  <!-- Orbes de Luz Flutuantes -->
+  <div class="floating-orb orb-1"></div>
+  <div class="floating-orb orb-2"></div>
+  <div class="floating-orb orb-3"></div>
+
+  <!-- Partículas Animadas -->
+  <div class="particles-container" id="particles"></div>
+  
+  <!-- Sticky Navbar -->
+  <nav class="sticky-navbar" id="stickyNavbar">
+    <a href="index.html" class="sticky-navbar-logo">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <use href="#icon-code"></use>
+      </svg>
+      Bruno Rafael De Mendonça Simas
+    </a>
+    <div class="sticky-nav-links">
+      <a href="index.html" class="sticky-nav-link" data-page="projetos">Projetos</a>
+      <a href="skills.html" class="sticky-nav-link" data-page="habilidades">Habilidades</a>
+      <a href="experience.html" class="sticky-nav-link" data-page="experiencia">Experiência</a>
+      <a href="formation.html" class="sticky-nav-link" data-page="formacao">Formação</a>
+      <a href="contact.html" class="sticky-nav-link" data-page="contato">Contato</a>
+    </div>
+  </nav>
+
   <header role="banner">
     <div class="header-content">
       <div class="header-text">
-        <h1>Bruno <span>— Experiência Profissional</span></h1>
+        <h1><span class="typing">Experiência Profissional</span></h1>
         <p>
           Trajetória profissional em Tecnologia da Informação com foco em suporte técnico corporativo,
           infraestrutura, sistemas ERP e desenvolvimento de soluções internas para otimização de processos.
         </p>
-      </div>
-      <div class="nav-links">
-        <a href="portfolio bruno.html" class="nav-link">
-          <i class="fas fa-project-diagram"></i>
-          <span>Projetos e Soluções</span>
-        </a>
-        <a href="skills.html" class="nav-link">
-          <i class="fas fa-cogs"></i>
-          <span>Habilidades Técnicas</span>
-        </a>
-        <a href="formation.html" class="nav-link">
-          <i class="fas fa-graduation-cap"></i>
-          <span>Formação Acadêmica</span>
-        </a>
-        <a href="contact.html" class="nav-link">
-          <i class="fas fa-envelope"></i>
-          <span>Contato</span>
-        </a>
       </div>
     </div>
   </header>
 
   <section role="region" class="experience-section">
     <h2>Experiência Profissional</h2>
-    <div class="experience-timeline">
-      <div class="experience-item">
-        <div class="experience-card">
-          <div class="experience-header">
-            <div class="experience-title">
-              <h3>Assistente de TI</h3>
-              <div class="experience-company">Turquesa Alimentos</div>
+    
+    <div class="timeline-container">
+      <!-- Timeline SVG Visual -->
+      <svg class="timeline-svg" viewBox="0 0 100 600" preserveAspectRatio="xMidYMid meet">
+        <!-- Vertical Line -->
+        <line x1="50" y1="20" x2="50" y2="580" stroke="rgba(56, 189, 248, 0.3)" stroke-width="2"/>
+        
+        <!-- Timeline Dots -->
+        <circle cx="50" cy="100" r="8" fill="#38bdf8" class="timeline-dot" style="animation-delay: 0s"/>
+        <circle cx="50" cy="300" r="8" fill="#38bdf8" class="timeline-dot" style="animation-delay: 0.3s"/>
+        <circle cx="50" cy="500" r="8" fill="#38bdf8" class="timeline-dot" style="animation-delay: 0.6s"/>
+        
+        <!-- Pulse Animation -->
+        <circle cx="50" cy="100" r="8" fill="none" stroke="#38bdf8" stroke-width="2" class="timeline-pulse" style="animation-delay: 0s"/>
+        <circle cx="50" cy="300" r="8" fill="none" stroke="#38bdf8" stroke-width="2" class="timeline-pulse" style="animation-delay: 0.3s"/>
+        <circle cx="50" cy="500" r="8" fill="none" stroke="#38bdf8" stroke-width="2" class="timeline-pulse" style="animation-delay: 0.6s"/>
+      </svg>
+
+      <!-- Experience Items -->
+      <div class="experience-timeline">
+        <div class="experience-item">
+          <div class="experience-card">
+            <div class="experience-header">
+              <div class="experience-title">
+                <h3>Assistente de TI</h3>
+                <div class="experience-company">Turquesa Alimentos</div>
+              </div>
             </div>
-          </div>
-          <p class="experience-description">
-            Atendimento a usuários via GLPI, suporte técnico presencial e remoto, apoio à infraestrutura de servidores e redes, desenvolvimento de soluções internas com Power Apps e utilização de ERP Pirâmide com banco de dados Oracle.
-          </p>
-          <div class="experience-tech-badges">
-            <span class="tech-badge">GLPI</span>
-            <span class="tech-badge">Power Apps</span>
-            <span class="tech-badge">Oracle</span>
-            <span class="tech-badge">ERP</span>
-            <span class="tech-badge">Suporte Técnico</span>
+            <p class="experience-description">
+              Atendimento a usuários via GLPI, suporte técnico presencial e remoto, apoio à infraestrutura de servidores e redes, desenvolvimento de soluções internas com Power Apps e utilização de ERP Pirâmide com banco de dados Oracle.
+            </p>
+            <div class="experience-tech-badges">
+              <span class="tech-badge">GLPI</span>
+              <span class="tech-badge">Power Apps</span>
+              <span class="tech-badge">Oracle</span>
+              <span class="tech-badge">ERP</span>
+              <span class="tech-badge">Suporte Técnico</span>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="experience-item">
-        <div class="experience-card">
-          <div class="experience-header">
-            <div class="experience-title">
-              <h3>Técnico de Manutenção de TI</h3>
-              <div class="experience-company">Infolab Soluções</div>
+        
+        <div class="experience-item">
+          <div class="experience-card">
+            <div class="experience-header">
+              <div class="experience-title">
+                <h3>Técnico de Manutenção de TI</h3>
+                <div class="experience-company">Infolab Soluções</div>
+              </div>
             </div>
-          </div>
-          <p class="experience-description">
-            Manutenção preventiva e corretiva de computadores, suporte a impressoras e redes, apoio na manutenção de servidores e elaboração de relatórios técnicos.
-          </p>
-          <div class="experience-tech-badges">
-            <span class="tech-badge">Suporte Técnico</span>
-            <span class="tech-badge">Redes</span>
-            <span class="tech-badge">Servidores</span>
-            <span class="tech-badge">Hardware</span>
+            <p class="experience-description">
+              Manutenção preventiva e corretiva de computadores, suporte a impressoras e redes, apoio na manutenção de servidores e elaboração de relatórios técnicos.
+            </p>
+            <div class="experience-tech-badges">
+              <span class="tech-badge">Suporte Técnico</span>
+              <span class="tech-badge">Redes</span>
+              <span class="tech-badge">Servidores</span>
+              <span class="tech-badge">Hardware</span>
+            </div>
           </div>
         </div>
-      </div>
-      
-      <div class="experience-item">
-        <div class="experience-card">
-          <div class="experience-header">
-            <div class="experience-title">
-              <h3>Assistente de Informática Jr</h3>
-              <div class="experience-company">EMIS</div>
+        
+        <div class="experience-item">
+          <div class="experience-card">
+            <div class="experience-header">
+              <div class="experience-title">
+                <h3>Assistente de Informática Jr</h3>
+                <div class="experience-company">EMIS</div>
+              </div>
             </div>
-          </div>
-          <p class="experience-description">
-            Suporte técnico a usuários, manutenção de infraestrutura, padronização de equipamentos e utilização do ERP Protheus em ambiente corporativo.
-          </p>
-          <div class="experience-tech-badges">
-            <span class="tech-badge">ERP Protheus</span>
-            <span class="tech-badge">Infraestrutura</span>
-            <span class="tech-badge">Suporte</span>
-            <span class="tech-badge">Padronização</span>
+            <p class="experience-description">
+              Suporte técnico a usuários, manutenção de infraestrutura, padronização de equipamentos e utilização do ERP Protheus em ambiente corporativo.
+            </p>
+            <div class="experience-tech-badges">
+              <span class="tech-badge">ERP Protheus</span>
+              <span class="tech-badge">Infraestrutura</span>
+              <span class="tech-badge">Suporte</span>
+              <span class="tech-badge">Padronização</span>
+            </div>
           </div>
         </div>
       </div>
@@ -216,25 +168,28 @@
     <div>
       <strong>Sobre</strong><br />
       <span>Desenvolvido com ❤️ por Bruno Rafael</span><br />
-      <span>© 2024 Todos os direitos reservados</span>
+      <span>© 2025 Todos os direitos reservados</span>
     </div>
   </footer>
+
+  <script src="site.js"></script>
 
   <script>
     // Animação de cards ao scroll
     document.addEventListener('DOMContentLoaded', function() {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      }, { threshold: 0.1 });
-
-      document.querySelectorAll('.experience-item').forEach(item => {
-        observer.observe(item);
+      Site.observeVisible(document.querySelectorAll('.experience-item'), {
+        threshold: 0.1,
+        visibleClass: 'visible'
       });
     });
+
+    function initBackToTop() {
+      // Removido
+    }
+
+    function initDrawerMenu() {
+      // Removido
+    }
   </script>
 </body>
 </html>
