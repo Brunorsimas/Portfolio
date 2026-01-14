@@ -276,32 +276,57 @@ header h1 {
   color: var(--text);
   border-right: 3px solid var(--primary);
   padding-right: 4px;
-  --typing-duration: 4s;
+  --typing-duration: 2.5s;
   --typing-steps: 25;
-  --typing-delay: 0.5s;
-  --cursor-blinks: 5;
+  --typing-delay: 0.3s;
+  --cursor-duration: 1s;
+  --cursor-infinite: infinite;
   animation:
-    typing var(--typing-duration) steps(var(--typing-steps), end) var(--typing-delay) forwards,
-    blink 0.7s steps(1, end) var(--cursor-blinks) calc(var(--typing-duration) + var(--typing-delay)) forwards;
+    typing var(--typing-duration) cubic-bezier(0.25, 0.46, 0.45, 0.94) var(--typing-delay) forwards,
+    blink var(--cursor-duration) var(--cursor-infinite) calc(var(--typing-duration) + var(--typing-delay));
   white-space: nowrap;
   overflow: hidden;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  will-change: width, opacity;
+}
+
+/* Reduzir animação para usuários com preferência de movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  .typing {
+    animation: none;
+    width: auto;
+    border-right: none;
+    padding-right: 0;
+  }
 }
 
 @keyframes typing {
   from {
     width: 0;
-    color: var(--text);
+    opacity: 0.8;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
   }
   to {
     width: 100%;
-    color: var(--text);
+    opacity: 1;
   }
 }
 
 @keyframes blink {
-  0% { border-color: var(--primary); }
-  50% { border-color: transparent; }
-  100% { border-color: transparent; }
+  0%, 50% { 
+    border-color: var(--primary); 
+    opacity: 1;
+  }
+  51%, 100% { 
+    border-color: transparent; 
+    opacity: 0.3;
+  }
 }
 
 header span {
