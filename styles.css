@@ -1,3 +1,31 @@
+/* ---- particles.js container ---- */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Ajustar z-index para garantir que o conteúdo fique acima das partículas */
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Manter navbar acima das partículas */
+.sticky-navbar {
+  z-index: 900;
+}
+
+/* ---- reset ---- */
+canvas {
+  display: block;
+}
+
 :root {
   --bg: #050714;
   --card: #0b1024;
@@ -45,6 +73,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: 'Inter', sans-serif;
   background: radial-gradient(circle at 15% 20%, rgba(var(--neon-magenta-rgb), 0.10), transparent 55%),
@@ -59,6 +92,30 @@ body {
   flex-direction: column;
   padding-top: 70px;
   position: relative;
+  margin: 0;
+}
+
+/* Garantir que o conteúdo principal preencha o espaço */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Forçar o rodapé a ficar no final */
+footer {
+  margin-top: auto;
+  padding: 34px 10%;
+  border-top: 1px solid rgba(var(--neon-magenta-rgb), 0.22);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  background: var(--footer-bg);
+  backdrop-filter: blur(var(--footer-blur));
+  font-size: 0.9rem;
+  line-height: 1.4;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.35);
 }
 
 body::before {
@@ -263,19 +320,7 @@ h2 {
   font-size: 2rem;
   margin-bottom: 40px;
 }
-footer {
-  padding: 34px 10%;
-  border-top: 1px solid rgba(var(--neon-magenta-rgb), 0.22);
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 14px;
-  background: var(--footer-bg);
-  backdrop-filter: blur(var(--footer-blur));
-  font-size: 0.9rem;
-  line-height: 1.4;
-  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.35);
-}
+
 footer a {
   color: var(--primary);
   text-decoration: none;
@@ -420,181 +465,10 @@ main {
   backface-visibility: hidden;
 }
 
-/* Removido will-change de elementos animados continuamente */
-.floating-orb {
-  /* will-change: transform; */ /* Causa mais mal que bem */
-  contain: layout style paint;
-  backface-visibility: hidden;
-}
-
 .carousel-slide {
   will-change: opacity, transform;
   contain: layout style paint;
   backface-visibility: hidden;
-}
-
-
-.particle-light {
-  width: 4px;
-  height: 4px;
-  background: radial-gradient(circle, rgba(240, 93, 251, 0.8), transparent);
-  border-radius: 50%;
-  filter: blur(1px);
-  animation: float-diagonal 15s infinite ease-in-out, pulse-light 2s infinite;
-}
-
-.particle-glow {
-  width: 8px;
-  height: 8px;
-  background: radial-gradient(circle, rgba(168, 85, 247, 0.6), transparent);
-  border-radius: 50%;
-  filter: blur(2px);
-  animation: float-wave 25s infinite ease-in-out, pulse-glow 3s infinite;
-}
-
-@keyframes float-up {
-  0% {
-    transform: translateY(100vh) translateX(0);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-100vh) translateX(50px);
-    opacity: 0;
-  }
-}
-
-@keyframes float-diagonal {
-  0% {
-    transform: translateY(100vh) translateX(-50px);
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-100vh) translateX(50px);
-    opacity: 0;
-  }
-}
-
-@keyframes float-wave {
-  0% {
-    transform: translateY(100vh) translateX(0);
-    opacity: 0;
-  }
-  10% {
-    opacity: 0.8;
-  }
-  50% {
-    transform: translateY(50vh) translateX(100px);
-  }
-  90% {
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateY(-100vh) translateX(-50px);
-    opacity: 0;
-  }
-}
-
-@keyframes twinkle {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 1; }
-}
-
-@keyframes pulse-light {
-  0%, 100% { 
-    box-shadow: 0 0 5px rgba(240, 93, 251, 0.4);
-    transform: scale(1);
-  }
-  50% { 
-    box-shadow: 0 0 15px rgba(240, 93, 251, 0.8);
-    transform: scale(1.2);
-  }
-}
-
-@keyframes pulse-glow {
-  0%, 100% { 
-    box-shadow: 0 0 8px rgba(168, 85, 247, 0.4);
-    transform: scale(1);
-  }
-  50% { 
-    box-shadow: 0 0 20px rgba(168, 85, 247, 0.8);
-    transform: scale(1.3);
-  }
-}
-
-/* Orbes de luz flutuantes - versão otimizada */
-.floating-orb {
-  position: fixed;
-  pointer-events: none;
-  z-index: 0;
-  border-radius: 50%;
-  opacity: 0.3; /* Reduzido opacidade */
-}
-
-.orb-1 {
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(0, 245, 255, 0.4), transparent);
-  border-radius: 50%;
-  top: -100px;
-  left: -100px;
-  animation: float-orb-1 30s infinite ease-in-out; /* Aumentado duração */
-  filter: blur(40px);
-}
-
-.orb-2 {
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(255, 43, 214, 0.3), transparent);
-  border-radius: 50%;
-  bottom: -150px;
-  right: -100px;
-  animation: float-orb-2 35s infinite ease-in-out; /* Aumentado duração */
-  filter: blur(50px);
-}
-
-.orb-3 {
-  width: 350px;
-  height: 350px;
-  background: radial-gradient(circle, rgba(138, 43, 226, 0.3), transparent);
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  animation: float-orb-3 40s infinite ease-in-out; /* Aumentado duração */
-  filter: blur(45px);
-  transform: translate(-50%, -50%);
-}
-
-@keyframes float-orb-1 {
-  0%, 100% { transform: translate(0, 0); }
-  25% { transform: translate(50px, -30px); }
-  50% { transform: translate(-30px, -50px); }
-  75% { transform: translate(20px, 30px); }
-}
-
-@keyframes float-orb-2 {
-  0%, 100% { transform: translate(0, 0); }
-  25% { transform: translate(-40px, 50px); }
-  50% { transform: translate(30px, -40px); }
-  75% { transform: translate(-50px, -30px); }
-}
-
-@keyframes float-orb-3 {
-  0%, 100% { transform: translate(-50%, -50%); }
-  25% { transform: translate(-45%, -55%); }
-  50% { transform: translate(-55%, -45%); }
-  75% { transform: translate(-50%, -50%); }
 }
 
 /* Media Queries Responsivas */
@@ -662,7 +536,7 @@ main {
     scroll-behavior: auto !important;
   }
 
-  .floating-orb, .particle-light, .particle-glow, .orb-1, .orb-2, .orb-3, #particles {
+  .floating-orb, .particle-light, .particle-glow, .orb-1, .orb-2, .orb-3 {
     display: none !important;
     opacity: 0 !important;
   }

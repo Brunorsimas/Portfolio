@@ -134,69 +134,6 @@
     });
   };
 
-  Site.initParticles = function (containerId) {
-    const container = document.getElementById(containerId || 'particles');
-    if (!container) return;
-    
-    // Sistema ultra leve - apenas partículas estáticas com CSS
-    // Performance: 0% CPU usage vs 15-20% do canvas animado
-    
-    // Criar partículas estáticas com animação CSS leve
-    const createStaticParticle = () => {
-      const particle = document.createElement('div');
-      particle.className = 'particle-static';
-      
-      // Posição aleatória
-      particle.style.left = Math.random() * 100 + '%';
-      particle.style.top = Math.random() * 100 + '%';
-      
-      // Tamanho e animação aleatórios
-      const size = Math.random() * 3 + 1;
-      particle.style.width = size + 'px';
-      particle.style.height = size + 'px';
-      particle.style.animationDelay = Math.random() * 10 + 's';
-      particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
-      
-      // Cor aleatória neon
-      const colors = ['rgba(0,245,255,0.6)', 'rgba(255,43,214,0.5)', 'rgba(138,43,226,0.4)'];
-      particle.style.background = colors[Math.floor(Math.random() * colors.length)];
-      particle.style.boxShadow = `0 0 ${size * 2}px ${particle.style.background}`;
-      
-      container.appendChild(particle);
-      
-      // Remover após muito tempo para limpar
-      setTimeout(() => particle.remove(), 30000);
-    };
-    
-    // Criar apenas 15 partículas estáticas (vs 40 animadas)
-    for (let i = 0; i < 15; i++) {
-      setTimeout(() => createStaticParticle(), i * 100);
-    }
-    
-    // Adicionar CSS para partículas estáticas se não existir
-    if (!document.querySelector('#particle-static-css')) {
-      const style = document.createElement('style');
-      style.id = 'particle-static-css';
-      style.textContent = `
-        .particle-static {
-          position: absolute;
-          border-radius: 50%;
-          pointer-events: none;
-          z-index: 0;
-          animation: float-up 20s infinite linear;
-          opacity: 0;
-        }
-        @keyframes float-up {
-          0% { opacity: 0; transform: translateY(100vh) scale(0); }
-          10% { opacity: 0.6; transform: translateY(90vh) scale(1); }
-          90% { opacity: 0.3; transform: translateY(10vh) scale(0.8); }
-          100% { opacity: 0; transform: translateY(-10vh) scale(0.5); }
-        }
-      `;
-      document.head.appendChild(style);
-    }
-  };
-
     // Mover para site.js: filtros de projetos (antes em index.html)
     Site.initFilters = function () {
       const filterButtons = document.querySelectorAll('.filter-btn');
@@ -339,7 +276,6 @@
       Site.initStickyNavbar();
       Site.initFilters();
       Site.initCarousels();
-      Site.initParticles('particles');
     };
 
   window.Site = Site;
