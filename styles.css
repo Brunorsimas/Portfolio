@@ -80,11 +80,12 @@ html, body {
 
 body {
   font-family: 'Inter', sans-serif;
-  background: radial-gradient(circle at 15% 20%, rgba(var(--neon-magenta-rgb), 0.10), transparent 55%),
+  background: url('Plano de fundo/Fundo.png') center center/cover no-repeat fixed,
+              radial-gradient(circle at 15% 20%, rgba(var(--neon-magenta-rgb), 0.10), transparent 55%),
               radial-gradient(circle at 80% 10%, rgba(var(--neon-cyan-rgb), 0.10), transparent 55%),
               radial-gradient(circle at 75% 85%, rgba(var(--neon-purple-rgb), 0.12), transparent 60%),
               linear-gradient(135deg, #050714 0%, #060a1a 45%, #050714 100%);
-  background-attachment: scroll;
+  background-attachment: fixed;
   color: var(--text);
   line-height: 1.6;
   min-height: 100vh;
